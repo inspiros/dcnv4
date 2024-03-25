@@ -20,7 +20,7 @@ try:
 except ImportError:
     for lib in LIBTORCH_LIBRARIES:
         sys.argv.append('--exclude')
-        sys.argv.extend(lib)
+        sys.argv.append(lib)
 
 
 if __name__ == "__main__":
