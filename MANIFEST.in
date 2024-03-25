@@ -1,0 +1,5 @@
+recursive-include dcnv4 *.cpp
+recursive-include dcnv4 *.cu
+include README.md
+include LICENSE.txt
+include requirements*.txt
