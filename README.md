@@ -30,7 +30,7 @@ I am NOT responsible for fixing such bugs, not until **OpenGVLab** updates their
 
 #### From TestPyPI:
 
-Note that the [TestPyPI](https://test.pypi.org/project/DCNv3/) wheel is built with `torch==2.2.1` and **Cuda 12.1**,
+Note that the [TestPyPI](https://test.pypi.org/project/DCNv4/) wheel is built with `torch==2.2.1` and **Cuda 12.1**,
 so it won't be backward compatible.
 If your setup is different, please head to [instructions to compile from source](#from-source).
 
