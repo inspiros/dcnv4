@@ -11,22 +11,19 @@ __all__ = [
     'flash_deform_attn',
 ]
 
-shm_size_dict = {
-    "8.0": 163000,
-    "8.6": 99000,
-    "8.7": 163000,
-    "8.9": 99000,
-    "9.0": 227000,
-    "7.5": 64000,
-    "7.0": 96000,
-}
 
-cuda_capability = f"{torch.cuda.get_device_properties(0).major}.{torch.cuda.get_device_properties(0).minor}"
-
-# if cuda_capability not in shm_size_dict:
-#     raise NotImplementedError
-
-# shm_size_cap = shm_size_dict[cuda_capability]
+def _compute_shm_size_cap():
+    shm_size_dict = {
+        "8.0": 163000,
+        "8.6": 99000,
+        "8.7": 163000,
+        "8.9": 99000,
+        "9.0": 227000,
+        "7.5": 64000,
+        "7.0": 96000,
+    }
+    cuda_capability = f"{torch.cuda.get_device_properties(0).major}.{torch.cuda.get_device_properties(0).minor}"
+    return shm_size_dict.get(cuda_capability, None)
 
 
 def factors(N):
